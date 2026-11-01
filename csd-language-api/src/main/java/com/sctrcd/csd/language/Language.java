@@ -1,21 +1,10 @@
 package com.sctrcd.csd.language;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "language")
 public class Language {
@@ -30,4 +19,40 @@ public class Language {
     @Column(length = 50)
     private String nativeName;
 
+    public Language() {}
+
+    public Language(String isoCode, String name, String nativeName) {
+        this.isoCode = isoCode;
+        this.name = name;
+        this.nativeName = nativeName;
+    }
+
+    public String getIsoCode() {
+        return isoCode;
+    }
+
+    public void setIsoCode(String isoCode) {
+        this.isoCode = isoCode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNativeName() {
+        return nativeName;
+    }
+
+    public void setNativeName(String nativeName) {
+        this.nativeName = nativeName;
+    }
+
+    @Override
+    public String toString() {
+        return "Language(isoCode=" + isoCode + ", name=" + name + ", nativeName=" + nativeName + ")";
+    }
 }

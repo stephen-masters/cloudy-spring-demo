@@ -5,7 +5,7 @@ package com.sctrcd.csd.crypto;
  * created. It includes the salt and the plaintext to help the requester
  * validate that the plaintext which has been hashed is the plaintext they
  * requested.
- * 
+ *
  * @author Stephen Masters
  */
 public class BCryptHashValidation {
@@ -14,8 +14,7 @@ public class BCryptHashValidation {
     private String hashtext;
     private Boolean isCorrect;
 
-    public BCryptHashValidation() {
-    }
+    public BCryptHashValidation() {}
 
     public BCryptHashValidation(String plaintext, String hashtext, Boolean isCorrect) {
         this.plaintext = plaintext;
@@ -49,9 +48,6 @@ public class BCryptHashValidation {
 
     @Override
     public String toString() {
-        return "Hash:{ plaintext=[" + plaintext 
-                + "], hashtext=[" + hashtext
-                + "], isCorrect=[" + isCorrect + "] }";
+        return "Hash:{ plaintext=[" + plaintext + "], hashtext=[" + hashtext + "], isCorrect=[" + isCorrect + "] }";
     }
-
 }

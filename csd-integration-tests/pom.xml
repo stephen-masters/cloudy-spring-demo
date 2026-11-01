@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.sctrcd.csd</groupId>
+    <artifactId>cloudy-spring-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>csd-integration-tests</artifactId>
+  <name>csd-integration-tests</name>
+
+  <description>Starts the Eureka server, both APIs and the web application in one JVM and checks that they find each other.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.sctrcd.csd</groupId>
+      <artifactId>csd-eureka</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sctrcd.csd</groupId>
+      <artifactId>csd-crypto-api</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sctrcd.csd</groupId>
+      <artifactId>csd-language-api</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sctrcd.csd</groupId>
+      <artifactId>csd-web</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
