@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 /**
  * Represents a request to validate whether the plaintext of a password matches
  * a particular hash.
- * 
+ *
  * @author Stephen Masters
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -14,8 +14,7 @@ public class HashValidationRequest {
     private String plaintext;
     private String hashtext;
 
-    public HashValidationRequest() {
-    }
+    public HashValidationRequest() {}
 
     public HashValidationRequest(String plaintext, String hashtext) {
         this.plaintext = plaintext;
@@ -40,9 +39,6 @@ public class HashValidationRequest {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + ": {" 
-                + " plaintext=" + plaintext 
-                + ", hashtext=" + hashtext + " }";
+        return this.getClass().getSimpleName() + ": {" + " plaintext=" + plaintext + ", hashtext=" + hashtext + " }";
     }
-
 }
