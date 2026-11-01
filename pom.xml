@@ -54,11 +54,17 @@
       <!-- Eureka's own dependencies, which neither Spring Boot nor Spring Cloud manage, do not
            converge. Each is pinned to the newest version anything asks for (httpclient to the last
            4.5.x), so that the enforcer's dependencyConvergence rule passes. Without these, Maven picks
-           hk2-api 3.1.1 beside hk2-locator 4.0.3, and httpclient 4.5.3. -->
+           hk2-api 3.1.1 beside hk2-locator 4.0.3, and httpclient 4.5.3. Guava is raised past the
+           33.0.0-jre that eureka-core asks for, which has a HIGH vulnerability (CVE-2026-102554). -->
       <dependency>
         <groupId>com.fasterxml.woodstox</groupId>
         <artifactId>woodstox-core</artifactId>
         <version>7.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>33.7.2-jre</version>
       </dependency>
       <dependency>
         <groupId>com.google.errorprone</groupId>
