@@ -1,9 +1,13 @@
 server:
   port: ${PORT:8761}
 
+spring:
+  application:
+    name: eureka
+
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    server:
-      waitTimeInMsWhenSyncEmpty: 0
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0

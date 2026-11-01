@@ -7,21 +7,20 @@ import org.springframework.stereotype.Service;
 
 /**
  * A simple service for hashing text.
- * 
+ *
  * @author Stephen Masters
  */
 @Service
 public class CryptoService {
 
-    private static Logger log = LoggerFactory.getLogger(CryptoService.class);
+    private static final Logger log = LoggerFactory.getLogger(CryptoService.class);
 
-    public CryptoService() {
-    }
+    public CryptoService() {}
 
     /**
      * Create a hash using the BCrypt algorithm. A random salt will be
      * generated.
-     * 
+     *
      * @param plaintext
      *            The plaintext to be hashed.
      * @return A {@link BCryptHash} encapsulating the plaintext, hash and salt.
@@ -33,7 +32,7 @@ public class CryptoService {
     /**
      * Create a hash using the BCrypt algorithm. This uses a predefined salt.
      * This enables us to check whether a password has changed.
-     * 
+     *
      * @param plaintext
      *            The plaintext to be hashed.
      * @return A {@link BCryptHash} encapsulating the plaintext, hash and salt.
@@ -50,7 +49,7 @@ public class CryptoService {
 
     /**
      * Confirms whether hash text is a valid BCrypt hash of the plaintext.
-     * 
+     *
      * @param plaintext
      *            The plaintext.
      * @param hashtext
@@ -71,5 +70,4 @@ public class CryptoService {
 
         return result;
     }
-
 }
